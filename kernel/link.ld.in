@@ -1,0 +1,6 @@
+#include "../board.h"
+
+SECTIONS {
+    . = CODE_START;
+    .text : { * (.text); }
+}

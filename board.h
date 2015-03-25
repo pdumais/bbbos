@@ -1,0 +1,87 @@
+// These are the definitions for the realview-pb-a8 board.
+//#define TIMER7_BASE 0x44E05000
+//#define TIMER7_INTERRUPT 66
+
+#define TIMER2_BASE 0x48040000
+#define TIMER3_BASE 0x48042000
+#define TIMER4_BASE 0x48044000
+#define TIMER5_BASE 0x48046000
+#define TIMER6_BASE 0x48048000
+#define TIMER7_BASE 0x4804A000
+#define TIMER2_INTERRUPT 68
+#define TIMER3_INTERRUPT 69
+#define TIMER4_INTERRUPT 92
+#define TIMER5_INTERRUPT 93
+#define TIMER6_INTERRUPT 94
+#define TIMER7_INTERRUPT 95
+#define CLKSEL_TIMER2_CLK  0x08
+#define CLKSEL_TIMER3_CLK  0x0C
+#define CLKSEL_TIMER4_CLK  0x10
+#define CLKSEL_TIMER5_CLK  0x18
+#define CLKSEL_TIMER6_CLK  0x1C
+#define CLKSEL_TIMER7_CLK  0x04
+#define CM_PER_L4LS_CLKSTCTRL 0x00
+#define CM_WKUP_CLKSTCTRL 0x00
+#define CM_WKP_GPIO0_CLKCTRL 0x08
+#define CM_PER_GPIO1_CLKCTRL 0xAC
+#define CM_PER_GPIO2_CLKCTRL 0xB0
+#define CM_PER_GPIO3_CLKCTRL 0xB4
+#define CM_PER_SPI1_CLKCTRL 0x50
+#define CM_PER_UART1_CLKCTRL 0x6C
+#define CM_PER_UART2_CLKCTRL 0x70
+#define CM_PER_UART3_CLKCTRL 0x74
+#define CM_PER_UART4_CLKCTRL 0x78
+#define CM_PER_UART5_CLKCTRL 0x38
+#define TIMER2_CONTROL 0x80
+#define TIMER3_CONTROL 0x84
+#define TIMER4_CONTROL 0x88
+#define TIMER5_CONTROL 0xEC
+#define TIMER6_CONTROL 0xF0
+#define TIMER7_CONTROL 0x7C
+#define CLKACTIVITY_TIMER2 (1<<14)
+#define CLKACTIVITY_TIMER3 (1<<15)
+#define CLKACTIVITY_TIMER4 (1<<16)
+#define CLKACTIVITY_TIMER5 (1<<27)
+#define CLKACTIVITY_TIMER6 (1<<28)
+#define CLKACTIVITY_TIMER7 (1<<13)
+
+#define GPIO0_INTERRUPT 96
+#define GPIO1_INTERRUPT 98 
+#define GPIO2_INTERRUPT 32
+#define GPIO3_INTERRUPT 62
+
+#define UART0 0x44E09000
+#define UART1 0x48022000
+#define UART2 0x48024000
+#define UART3 0x481A6000
+#define UART4 0x481A8000
+#define UART5 0x481AA000
+
+#define MMC1 0x481D8000
+#define GPIO0 0x44E07000
+#define GPIO1 0x4804C000
+#define GPIO2 0x481AC000
+#define GPIO3 0x481AE000
+
+#define SPI0        0x48030000
+#define SPI1        0x481A0000
+#define INTC        0x48200000
+#define CLOCK_MODULE_PLL        0x44E00500
+#define CLOCK_MODULE_PERIPHERAL 0x44E00000
+#define CLOCK_MODULE_WAKEUP     0x44E00400
+
+
+#define INSTALLED_RAM 512 
+#define SDRAM_START 0x80000000
+#define SDRAM_END   0xC0000000
+
+
+//-------- Configurable parameters ------------------------------
+#define EEPROMCS 1
+#define EXPANDERCS 0
+#define PROCESS_CODE_START (0x20000000)
+#define CODE_START (SDRAM_START)  // this is where the board will jump and where qemu will copy our image
+#define FLASH_START 0x00000000
+#define KERNEL_MMC_LOCATION (0x20000)  // block number, so multiply this by 512 to get byte count
+#define APPS_MMC_LOCATION (0x28000)  // block number, so multiply this by 512 to get byte count
+#define PROGRAM_ADDRESS_IN_EMMC 0x28000
