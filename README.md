@@ -15,7 +15,7 @@ SoC: AM3359
 
 The kernel image will be copied to 0x80000000 by uboot and execution will start from there
 Booting will try to download a kernel image from tftp. This is mandatory
-
+```
 Pins
     p9.2: gnd
     p9.4: 3.3
@@ -31,4 +31,4 @@ Pins
 
     p8.2: gnd
     p8.7: GPIO66 (switch)
-
+```
