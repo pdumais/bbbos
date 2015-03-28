@@ -1,6 +1,8 @@
 # bbbos
 A BeagleBoneBlack operating system written in assembly.
 
+The kernel provides a 32bit virtual memory manager and a full preemptive task scheduler. 
+
 The bbbreset.sh script can be ignored. It is a script that I use to toggle a relay on a WebRelay device. The relay
 power-sycles my BBB. It makes things easier because I don't have to manually reset the BBB each time.
 
